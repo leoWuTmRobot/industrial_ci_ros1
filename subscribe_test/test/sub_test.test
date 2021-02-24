@@ -1,0 +1,12 @@
+<launch>
+  <!--
+    This file is meant to run with a ursim robot running inside a docker container
+    Therefore, certain assumptions are met like the robot model and the robot's IP address.
+    -->
+
+  <node name="pub" pkg="subscribe_test" type="pub"/>
+
+
+  <test test-name="test_sub" pkg="subscribe_test" type="test_sub.py" name="test_sub" time-limit="60.0"/>
+
+</launch>
